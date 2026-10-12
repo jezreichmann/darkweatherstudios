@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111311">
+    <meta name="description" content="Dark Weather Studios develops thoughtful software and produces bold videos for social media.">
+    <title>Dark Weather Studios — Software &amp; Stories</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #f3f2eb;
+        --muted: #a4a69e;
+        --surface: #171a17;
+        --line: #30352f;
+        --accent: #c3f17b;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(ellipse at 75% 12%, rgb(103 133 79 / 14%), transparent 34rem),
+          #111311;
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      header {
+        min-height: 88px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(243 242 235 / 10%);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 34px;
+        height: 34px;
+        place-items: center;
+        border: 1px solid rgb(195 241 123 / 55%);
+        border-radius: 50%;
+        color: var(--accent);
+        font-family: Georgia, serif;
+        font-size: 19px;
+        font-style: italic;
+      }
+
+      nav {
+        display: flex;
+        gap: 32px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      nav a {
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        color: var(--ink);
+      }
+
+      .hero {
+        position: relative;
+        display: flex;
+        min-height: 555px;
+        flex-direction: column;
+        justify-content: center;
+        padding: 90px 0 96px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 24px;
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.17em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 24px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      h1 {
+        max-width: 820px;
+        margin: 0;
+        font-size: clamp(3.5rem, 9vw, 7.2rem);
+        font-weight: 550;
+        letter-spacing: -0.085em;
+        line-height: 0.98;
+      }
+
+      h1 span {
+        color: var(--accent);
+      }
+
+      .intro {
+        max-width: 480px;
+        margin: 28px 0 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+
+      .hero-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        width: fit-content;
+        margin-top: 34px;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 650;
+        text-decoration: none;
+      }
+
+      .hero-link span {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--accent);
+        transition: transform 160ms ease;
+      }
+
+      .hero-link:hover span {
+        transform: translateY(3px);
+      }
+
+      .services {
+        padding: 30px 0 100px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 26px;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: clamp(1.7rem, 4vw, 2.5rem);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+      }
+
+      .section-heading p {
+        max-width: 290px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .service-card {
+        min-height: 290px;
+        padding: 30px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: linear-gradient(145deg, rgb(255 255 255 / 3%), transparent 70%), var(--surface);
+      }
+
+      .service-number {
+        color: var(--accent);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+      }
+
+      .service-card h3 {
+        margin: 48px 0 12px;
+        font-size: 25px;
+        font-weight: 550;
+        letter-spacing: -0.05em;
+      }
+
+      .service-card p {
+        max-width: 400px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 22px;
+      }
+
+      .tags span {
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        color: #c2c5bc;
+        font-size: 10px;
+      }
+
+      footer {
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        border-top: 1px solid rgb(243 242 235 / 10%);
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(100% - 36px, 480px);
+        }
+
+        header {
+          min-height: 72px;
+        }
+
+        nav {
+          gap: 18px;
+          font-size: 12px;
+        }
+
+        .brand {
+          gap: 8px;
+          font-size: 12px;
+        }
+
+        .brand-mark {
+          width: 30px;
+          height: 30px;
+        }
+
+        .hero {
+          min-height: 500px;
+          padding: 80px 0;
+        }
+
+        .intro {
+          font-size: 15px;
+        }
+
+        .section-heading {
+          align-items: start;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .service-card {
+          min-height: 270px;
+          padding: 24px;
+        }
+
+        .service-card h3 {
+          margin-top: 38px;
+        }
+
+        .services {
+          padding-bottom: 70px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="brand" href="#" aria-label="Dark Weather Studios home">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>Dark Weather Studios</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="#work">What we do</a>
+          <a href="#about">About</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="about">
+          <p class="eyebrow">Independent creative studio</p>
+          <h1>Make something<br><span>that matters.</span></h1>
+          <p class="intro">
+            Dark Weather Studios develops useful software and produces
+            distinctive videos made for the social feed.
+          </p>
+          <a class="hero-link" href="#work">Explore what we do <span aria-hidden="true">↓</span></a>
+        </section>
+
+        <section class="services" id="work" aria-labelledby="services-title">
+          <div class="section-heading">
+            <h2 id="services-title">Two ways to make an impact.</h2>
+            <p>Thoughtful craft, from the first idea to the finished experience.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-number">01 / SOFTWARE</span>
+              <h3>Software development</h3>
+              <p>
+                We design and build digital products that solve real problems
+                — from first concepts to reliable, polished software.
+              </p>
+              <div class="tags" aria-label="Software capabilities">
+                <span>Web apps</span>
+                <span>Product design</span>
+                <span>Development</span>
+              </div>
+            </article>
+            <article class="service-card">
+              <span class="service-number">02 / VIDEO</span>
+              <h3>Video for social</h3>
+              <p>
+                We create engaging, platform-ready videos that bring your
+                message to life across the places people scroll.
+              </p>
+              <div class="tags" aria-label="Social video platforms">
+                <span>TikTok</span>
+                <span>Instagram</span>
+                <span>YouTube</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© <span id="year">2026</span> Dark Weather Studios</p>
+        <p>Software with purpose. Stories with feeling.</p>
+      </footer>
+    </div>
+  </body>
+</html>
