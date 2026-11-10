@@ -1,0 +1,4 @@
+Donate Help:
+
+Stripe Return page
+https://darkweatherstudios.com/thank-you.html?app={APP}

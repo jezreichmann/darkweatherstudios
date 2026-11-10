@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111311">
+    <meta name="description" content="Thank you for supporting Dark Weather Studios.">
+    <title>Thank You — Dark Weather Studios</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="brand" href="index.html" aria-label="Dark Weather Studios home">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>Dark Weather Studios</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero hero--compact">
+          <span class="pill">✓ Donation received</span>
+          <h1>Thank <span>you.</span></h1>
+          <p class="intro intro--wide">
+            Your contribution has been received successfully. By supporting
+            independent software development, you've helped ensure that current
+            and future Dark Weather Studios applications continue to improve.
+          </p>
+          <p class="meta">
+            Your contribution was made from:
+            <span id="appName" class="app-name">Dark Weather Studios Software</span>
+          </p>
+
+          <div class="panel">
+            <h2>Your support genuinely matters</h2>
+            <p>
+              Unlike large software companies, independent developers rely on a
+              small number of supporters to help fund future development.
+            </p>
+            <p>Your donation contributes towards:</p>
+            <ul>
+              <li>New features</li>
+              <li>Bug fixes</li>
+              <li>Testing hardware</li>
+              <li>Software licences</li>
+              <li>Hosting and infrastructure</li>
+              <li>Future Dark Weather Studios projects</li>
+            </ul>
+            <div class="quote">
+              Most users will never make a donation.<br><br>
+              Today, you chose to support the work behind the software, and for
+              that I am genuinely grateful.
+            </div>
+          </div>
+
+          <div class="buttons">
+            <a class="button button--primary" href="index.html">Return to Dark Weather Studios</a>
+            <a class="button button--ghost" href="mailto:contact@darkweatherstudios.com">Get in Touch</a>
+          </div>
+
+          <p class="meta">
+            A receipt has been emailed to you by Stripe. If you have any
+            questions regarding your contribution, please contact Dark Weather
+            Studios.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>© <span id="year">2026</span> Dark Weather Studios</p>
+        <p><a href="mailto:contact@darkweatherstudios.com">contact@darkweatherstudios.com</a></p>
+        <p>Software with purpose. Stories with feeling.</p>
+      </footer>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const app = params.get('app') || 'Dark Weather Studios Software';
+
+      document.getElementById('appName').textContent = app;
+    </script>
+  </body>
+</html>

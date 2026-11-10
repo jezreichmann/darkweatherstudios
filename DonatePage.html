@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111311">
+    <meta name="description" content="Support Dark Weather Studios and help fund future independent software development.">
+    <title>Support Dark Weather Studios</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="brand" href="index.html" aria-label="Dark Weather Studios home">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>Dark Weather Studios</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="#support">Support us</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero hero--compact">
+          <p class="eyebrow">Independent creative studio</p>
+          <h1>Keep building<br><span>things that matter.</span></h1>
+          <p class="intro intro--wide">
+            Thank you for using
+            <span id="appName" class="app-name">Dark Weather Studios Software</span>.
+            Dark Weather Studios develops useful software and creative tools that
+            are free to use. If this application has saved you time, solved a
+            problem, or helped your workflow, please consider helping fund future
+            development.
+          </p>
+          <div class="note">
+            Most people who use independent software never donate, and that is
+            completely okay. However, if this application has genuinely helped
+            you, even a small contribution can make a meaningful difference and
+            helps ensure future updates remain possible.
+          </div>
+        </section>
+
+        <section class="services" id="support" aria-labelledby="support-title">
+          <div class="section-heading">
+            <h2 id="support-title">Choose a way to support.</h2>
+            <p>Every contribution goes directly towards future development.</p>
+          </div>
+          <div class="card-grid">
+            <article class="service-card service-card--tier">
+              <span class="service-number">01 / COFFEE ☕</span>
+              <h3>Coffee</h3>
+              <p class="price">£5</p>
+              <p>
+                A simple thank you and a valuable contribution towards ongoing
+                development.
+              </p>
+              <div class="buttons">
+                <a class="button button--primary" href="https://buy.stripe.com/14A7sLc7XarZb0yg1Rb7y00">Donate £5</a>
+              </div>
+            </article>
+            <article class="service-card service-card--tier service-card--recommended">
+              <span class="service-number">02 / BEER 🍺</span>
+              <h3>Beer</h3>
+              <p class="price">£10</p>
+              <p>
+                The most popular choice. Helps fund bug fixes, maintenance and
+                future improvements.
+              </p>
+              <div class="buttons">
+                <a class="button button--primary" href="https://buy.stripe.com/cNibJ1dc10Rpd8Gg1Rb7y02">Donate £10</a>
+              </div>
+            </article>
+            <article class="service-card service-card--tier">
+              <span class="service-number">03 / FEATURE FUND 🚀</span>
+              <h3>Feature Fund</h3>
+              <p class="price">£25</p>
+              <p>
+                Helps accelerate development of new features, enhancements and
+                future releases.
+              </p>
+              <div class="buttons">
+                <a class="button button--primary" href="https://buy.stripe.com/eVqcN54Fv9nV7Om7vlb7y03">Donate £25</a>
+              </div>
+            </article>
+            <article class="service-card service-card--tier service-card--superstar">
+              <span class="service-number">04 / SUPPORTER ❤️</span>
+              <h3>❤️ Studio Supporter</h3>
+              <div class="superstar-label">
+                ⭐ Be a Superstar Supporter
+              </div>
+              <p class="price">£50</p>
+              <p>
+                A substantial contribution towards testing hardware, licences and
+                future projects.
+              </p>
+              <div class="buttons">
+                <a class="button button--primary" href="https://buy.stripe.com/9B6cN51tj0Rp5Ge8zpb7y04">Donate £50</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-heading section-heading--spaced">
+            <h2>What your donations support.</h2>
+          </div>
+          <div class="tags" aria-label="What donations support">
+            <span>Bug Fixes</span>
+            <span>New Features</span>
+            <span>Testing Hardware</span>
+            <span>Documentation</span>
+            <span>Software Licences</span>
+            <span>Future Projects</span>
+            <span>Free Software</span>
+          </div>
+          <p class="meta">
+            Every donation is received directly by Dark Weather Studios and
+            contributes towards development time, testing hardware, software
+            licences, hosting costs and future releases. Thank you for supporting
+            independent software development.
+          </p>
+          <p class="meta">
+            You were referred here by:
+            <span id="sourceApp" class="app-name">Dark Weather Studios Software</span>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>© <span id="year">2026</span> Dark Weather Studios</p>
+        <p><a href="mailto:contact@darkweatherstudios.com">contact@darkweatherstudios.com</a></p>
+        <p>Software with purpose. Stories with feeling.</p>
+      </footer>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const appName = params.get('app') || 'Dark Weather Studios Software';
+
+      document.getElementById('appName').textContent = appName;
+      document.getElementById('sourceApp').textContent = appName;
+    </script>
+  </body>
+</html>
