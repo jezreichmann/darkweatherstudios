@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111311">
+    <meta name="description" content="Software made and published by Dark Weather Studios.">
+    <title>Software — Dark Weather Studios</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .software-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 700px);
+      }
+
+      .software-card {
+        display: flex;
+        min-height: 270px;
+        flex-direction: column;
+      }
+
+      .software-card h3 {
+        margin-top: 32px;
+      }
+
+      .software-card p {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a class="brand" href="index.html" aria-label="Dark Weather Studios home">
+          <span class="brand-mark" aria-hidden="true">D</span>
+          <span>Dark Weather Studios</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="software.html" aria-current="page">Software</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero hero--compact">
+          <p class="eyebrow">Made and published by us</p>
+          <h1>Our <span>software.</span></h1>
+          <p class="intro intro--wide">
+            A growing collection of applications made and published by
+            Dark Weather Studios.
+          </p>
+        </section>
+
+        <section class="services" aria-labelledby="software-title">
+          <div class="section-heading">
+            <h2 id="software-title">Published applications.</h2>
+            <p>Software created by Dark Weather Studios.</p>
+          </div>
+          <div class="software-grid">
+            <article class="service-card service-card--software software-card">
+              <span class="service-number">PUBLISHED APPLICATION</span>
+              <h3>OnCue</h3>
+              <p>An application made and published by Dark Weather Studios.</p>
+              <div class="buttons">
+                <a class="button button--primary" href="ms-windows-store://pdp/?productid=XPDFH0TSV7BWP7">Get OnCue from Microsoft Store</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2026 Dark Weather Studios</p>
+        <p><a href="mailto:contact@darkweatherstudios.com">contact@darkweatherstudios.com</a></p>
+        <p>Software with purpose. Stories with feeling.</p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
